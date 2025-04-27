@@ -1,0 +1,81 @@
+.faq {
+  display: flex;
+  justify-content: center;
+  background: #FFFFFF;
+  padding-top: 190px;
+  padding-bottom: 200px;
+}
+
+.faq-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+} 
+
+.faq-text-medium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  margin-bottom: 50px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #104D58;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: #F1FAFC;
+}
+
+.faq-text-large{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.faq-text-large span {
+  color: #104D58;
+}
+
+.faq-contents p {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.question-content-session{
+  margin-top: 80px;
+  background-color: #F1FAFC;
+  max-width: 1200px;
+  padding: 60px 70px;
+  border-radius: 20px;
+}
+
+.question-content-session dl dt {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.question-content-session div {
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+
+.question-content-session dl dt::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #104D58;
+}
+
+.question-content-session dl dd {
+  font-family: Helvetica, Arial;
+  margin-bottom: 8px;
+  margin-left: 30px;
+  color: #61616B;
+}

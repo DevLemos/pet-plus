@@ -14,7 +14,7 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 32px;
   width: 180px;
   height: 85px;
 }
@@ -53,7 +53,7 @@
   color: var(--white-color);
   font-size: 16px;
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 60px;
   background: linear-gradient(to right, #104D58, #2E7D8E);
   z-index: 1;
   transition: color 0.5s ease;
@@ -95,4 +95,25 @@
   opacity: 0.9;
 } */
 
+
+@media (max-width: 2000px) {
+  .nav {
+    margin: 0px;
+  }
+  .logo {
+    margin-left: 135px;
+  }
+  .btnLogin {
+    margin-right: 155px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .logo {
+    margin-left: 30px;
+  }
+  .btnLogin {
+    margin-right: 20px;
+  }
+}
 

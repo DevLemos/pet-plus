@@ -12,19 +12,24 @@ const Header = () => {
       <nav className={`${Styles.nav} container`}>
         <ul>
           <li>
-            <Link to="/">Início</Link>
+            <a href="#introduction">Início</a>
+            {/* <Link to="/">Início</Link> */}
           </li>
           <li>
-            <Link to="/">Sobre</Link>
+            <a href="#about">Sobre</a>
+            {/* <Link to="/">Sobre</Link> */}
           </li>
           <li>
-            <Link to="/">Recursos</Link>
+            <a href="#features">Recursos</a>
+            {/* <Link to="/">Recursos</Link> */}
           </li>
           <li>
-            <Link to="/">Planos</Link>
+            <a href="#plans">Planos</a>
+            {/* <Link to="/">Planos</Link> */}
           </li>
           <li>
-            <Link to="/">FAQ</Link>
+            <a href="#faq">FAQ</a>
+            {/* <Link to="/">FAQ</Link> */}
           </li>
           <li>
             <Link to="/">Contato</Link>

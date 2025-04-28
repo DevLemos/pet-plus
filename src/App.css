@@ -40,6 +40,10 @@ img {
   max-width: 100%;
 }
 
+main {
+  margin: 0px;
+}
+
 .container {
   display: flex;
   max-width: 1800px;

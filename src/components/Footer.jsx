@@ -1,14 +1,29 @@
 import React from 'react';
 import Styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import PetPlus from '../assets/LogoFooter.svg?react';
-import Facebook from '../assets/facebook.svg?react';
-import Instagram from '../assets/instagram.svg?react';
-import Youtube from '../assets/youtube.svg?react';
-import TikTok from '../assets/tiktok.svg?react';
-import Whatsapp from '../assets/whatsapp.svg?react';
+import SocialMedia from './SocialMedia';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const sessionNavigation = (section) => {
+    if (location.pathname !== '/') {
+      localStorage.setItem('scrollTo', section);
+      navigate('/');
+    } else {
+      scroller.scrollTo(section, {
+        duration: 500,
+        delay: 0,
+        smooth: true,
+        offset: -70,
+      });
+    }
+  };
+
   return (
     <footer className={Styles.footer}>
       <div className={Styles['footer-content']}>
@@ -37,59 +52,45 @@ const Footer = () => {
         <div className={Styles['information-content']}>
           <h3>Informações</h3>
           <div className={Styles['information-links']}>
-            <Link to="/">
-              <span>Planos</span>
-            </Link>
-            <Link to="/">
-              <span>FAQ</span>
-            </Link>
-            <Link to="/">
-              <span>Sobre</span>
-            </Link>
-            <Link to="/">
-              <span>Termos e Condições</span>
-            </Link>
+            <ul>
+              <li>
+                <span
+                  onClick={() => {
+                    sessionNavigation('plans');
+                  }}
+                >
+                  Planos
+                </span>
+              </li>
+              <li>
+                <span
+                  onClick={() => {
+                    sessionNavigation('faq');
+                  }}
+                >
+                  FAQ
+                </span>
+              </li>
+              <li>
+                <span
+                  onClick={() => {
+                    sessionNavigation('about');
+                  }}
+                >
+                  Sobre
+                </span>
+              </li>
+              <li>
+                <Link to="/">
+                  <span>Termos e Condições</span>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className={Styles['social-media-content']}>
-        <div>
-          <Link to="/">
-            <svg width="24" height="24">
-              <Instagram />
-            </svg>
-          </Link>
-        </div>
-        <div>
-          <Link to="/">
-            <svg width="24" height="24">
-              <TikTok />
-            </svg>
-          </Link>
-        </div>
-        <div>
-          <Link to="/">
-            <svg width="24" height="24">
-              <Facebook />
-            </svg>
-          </Link>
-        </div>
-        <div>
-          <Link to="/">
-            <svg width="24" height="24">
-              <Youtube />
-            </svg>
-          </Link>
-        </div>
-        <div>
-          <Link to="/">
-            <svg width="24" height="24">
-              <Whatsapp />
-            </svg>
-          </Link>
-        </div>
-      </div>
+      <SocialMedia />
 
       <hr className={Styles['dividing-line']}></hr>
       <p>

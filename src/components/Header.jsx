@@ -1,44 +1,60 @@
 import React from 'react';
 import Styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PetPlus from '../assets/Logo.svg?react';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
+  const handleNavigateAndScroll = (sectionId) => {
+    navigate('/'); // Primeiro volta para a Home
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Espera um pouquinho pra garantir que a Home carregou
+  };
+
   return (
     <header className={Styles.header}>
-      <Link className={Styles.logo} to="/" aria-label="Pet+ - Home">
+      <a
+        onClick={() => handleNavigateAndScroll('introduction')}
+        className={Styles.logo}
+      >
         <PetPlus />
-      </Link>
+      </a>
       <nav className={`${Styles.nav} container`}>
         <ul>
           <li>
-            <a href="#introduction">Início</a>
-            {/* <Link to="/">Início</Link> */}
+            <a onClick={() => handleNavigateAndScroll('introduction')}>
+              Início
+            </a>
           </li>
           <li>
-            <a href="#about">Sobre</a>
-            {/* <Link to="/">Sobre</Link> */}
+            <a onClick={() => handleNavigateAndScroll('about')}>Sobre</a>
           </li>
           <li>
-            <a href="#features">Recursos</a>
-            {/* <Link to="/">Recursos</Link> */}
+            <a onClick={() => handleNavigateAndScroll('features')}>Recursos</a>
           </li>
           <li>
-            <a href="#plans">Planos</a>
-            {/* <Link to="/">Planos</Link> */}
+            <a onClick={() => handleNavigateAndScroll('plans')}>Planos</a>
           </li>
           <li>
-            <a href="#faq">FAQ</a>
-            {/* <Link to="/">FAQ</Link> */}
+            <a onClick={() => handleNavigateAndScroll('faq')}>FAQ</a>
           </li>
           <li>
-            <Link to="/">Contato</Link>
+            <Link to="/Contato">Contato</Link>
           </li>
         </ul>
       </nav>
-      <Link className={Styles.btnLogin} to="/Login">
+      <button onClick={handleLoginClick} className={Styles.btnLogin}>
         <span>Login/Criar</span>
-      </Link>
+      </button>
     </header>
   );
 };

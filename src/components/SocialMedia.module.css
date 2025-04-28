@@ -1,0 +1,27 @@
+.social-media-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.social-media-content div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #F1FAFC;
+}
+
+.social-media-content div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-media-content div:hover {
+  transform: translateY(-10px);
+}

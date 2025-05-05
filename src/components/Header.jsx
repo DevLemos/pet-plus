@@ -2,10 +2,37 @@ import React from 'react';
 import Styles from './Header.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import PetPlus from '../assets/Logo.svg?react';
+import { animate, createSpring } from 'animejs';
 
 const Header = () => {
-  const navigate = useNavigate();
+  const handleMouseEnter = () => {
+    animate(root.current, {
+      scale: [
+        { to: 1.3, ease: 'inOut(2)', duration: 300 },
+        { to: 1, ease: createSpring({ stiffness: 250 }) },
+      ],
+      rotate: [
+        { to: 10, duration: 200, ease: 'easeInOutSine' },
+        { to: -10, duration: 200, ease: 'easeInOutSine' },
+        { to: 0, duration: 300, ease: createSpring({ stiffness: 200 }) },
+      ],
+      opacity: [
+        { to: 0.8, duration: 300, ease: 'easeInOutQuad' },
+        { to: 1, duration: 300, ease: 'easeInOutQuad' },
+      ],
+    });
+  };
+  const handleMouseLeave = () => {
+    animate(root.current, {
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      duration: 300,
+      easing: 'easeOutQuad',
+    });
+  };
 
+  const navigate = useNavigate();
   const handleLoginClick = () => {
     navigate('/login');
   };
@@ -23,6 +50,9 @@ const Header = () => {
   return (
     <header className={Styles.header}>
       <a
+        ref={(el) => (root.current = el)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         onClick={() => handleNavigateAndScroll('introduction')}
         className={Styles.logo}
       >

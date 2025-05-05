@@ -20,6 +20,15 @@ body{
   font-family: var(--first-type);
 }
 
+.home-style {
+  background-color: #FFFFFF;
+}
+
+.login-style {
+  background-color: #F1FAFC;
+  padding-top: 0px;
+}
+
 h1,h2,h3,h4, p{
   margin: 0px;
 }

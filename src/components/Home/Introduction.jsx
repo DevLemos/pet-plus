@@ -1,4 +1,3 @@
-import React from 'react';
 import Styles from './Introduction.module.css';
 import { Link } from 'react-router-dom';
 import Veterinary from '../../assets/Veterinary.jpg';
@@ -12,12 +11,14 @@ const Introduction = () => {
             Software para Clínicas Veterinárias
           </p>
           <h1 className={Styles['introduction-text-large']}>
-            Gestão<br></br> inteligente para <br></br>sua{' '}
-            <span>clínica veterinária</span>
+            Gestão
+            <br /> inteligente para <br />
+            sua <span>clínica veterinária</span>
           </h1>
           <p className={Styles['introduction-text-small']}>
-            Simplifique sua rotina, aumente sua<br></br> produtividade e ofereça
-            um atendimento<br></br> excepcional com nossa plataforma completa.
+            Simplifique sua rotina, aumente sua
+            <br /> produtividade e ofereça um atendimento
+            <br /> excepcional com nossa plataforma completa.
           </p>
 
           <div className={Styles['introduction-contents-buttons']}>

@@ -4,6 +4,9 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  optimizeDeps: {
+    include: ['animejs'],
+  },
   plugins: [react(), svgr()],
-  base: '/pet-plus',
+  base: '/',
 });

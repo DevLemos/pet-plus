@@ -8,5 +8,5 @@ export default defineConfig({
     include: ['animejs'],
   },
   plugins: [react(), svgr()],
-  base: '/pet-plus/',
+  base: '/pet-plus',
 });

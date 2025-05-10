@@ -8,13 +8,15 @@ import {
 import DynamicBodyStyle from './components/DynamicBodyStyle';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home/Home';
-import Login from './components/Login/Login';
-import Register from './components/Login/Register';
-import Dashboard from './components/Dashboard/Dashboard';
-import Contact from './components/Contact/Contact';
+import Header from './layouts/Header';
+import Footer from './layouts/Footer';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Register from './pages/Login/Register';
+import Dashboard from './pages/Dashboard/Dashboard';
+import CompanyHistory from './pages/Home/CompanyHistory';
+import TermsAndConditions from './pages/Home/TermsAndConditions';
+import Contact from './pages/Home/Contact';
 
 function AppContent() {
   const location = useLocation();
@@ -34,6 +36,8 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/ConhecaNos" element={<CompanyHistory />} />
+        <Route path="/TermosCondicoes" element={<TermsAndConditions />} />
         <Route path="/Contato" element={<Contact />} />
       </Routes>
       {!shouldHideHeaderFooter && <Footer />}

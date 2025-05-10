@@ -31,7 +31,10 @@ const Plans = () => {
                 <li>Até 3 usuários</li>
               </ul>
 
-              <Link className={Styles.btnExperimentePlano} to="/">
+              <Link
+                className={Styles.btnExperimentePlano}
+                to="/Register?plano=essencial"
+              >
                 <span>Experimente o plano</span>
               </Link>
             </div>
@@ -62,7 +65,10 @@ const Plans = () => {
                 </div>
               </ul>
 
-              <Link className={Styles.btnExperimentePlanoPro} to="/">
+              <Link
+                className={Styles.btnExperimentePlanoPro}
+                to="/Register?plano=pro"
+              >
                 Experimente o plano
               </Link>
             </div>

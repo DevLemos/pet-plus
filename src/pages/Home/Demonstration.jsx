@@ -15,7 +15,10 @@ const Demonstration = () => {
               seus processos e melhorar a experiência dos seus clientes.
             </span>
           </p>
-          <Link className={Styles.btnDemonstracao} to="/">
+          <Link
+            className={Styles.btnDemonstracao}
+            to="/Register?plano=Demonstração"
+          >
             Solicitar Demonstração
           </Link>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Styles from './Contact.module.css';
-import SocialMedia from '../SocialMedia';
+import SocialMedia from '../../components/SocialMedia';
 
 const Contact = () => {
   return (

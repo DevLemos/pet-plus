@@ -2,7 +2,7 @@ import React from 'react';
 import Styles from './Login.module.css';
 import PetPlus from '../../assets/Logo.svg?react';
 import { Link, useNavigate } from 'react-router-dom';
-import { animate, createSpring } from 'animejs';
+import { animate } from 'animejs';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,26 +13,27 @@ const Login = () => {
   const handleMouseEnter = () => {
     animate(root.current, {
       scale: [
-        { to: 1.3, ease: 'inOut(2)', duration: 300 },
-        { to: 1, ease: createSpring({ stiffness: 250 }) },
+        { to: 1.05, duration: 300, easing: 'easeInOutQuad' },
+        { to: 1, duration: 500, easing: 'easeOutElastic(1, .4)' },
       ],
       rotate: [
-        { to: 10, duration: 200, ease: 'easeInOutSine' },
-        { to: -10, duration: 200, ease: 'easeInOutSine' },
-        { to: 0, duration: 300, ease: createSpring({ stiffness: 200 }) },
+        { to: 2, duration: 200, easing: 'easeInOutSine' },
+        { to: -2, duration: 200, easing: 'easeInOutSine' },
+        { to: 0, duration: 400, easing: 'easeOutElastic(1, .4)' },
       ],
       opacity: [
-        { to: 0.8, duration: 300, ease: 'easeInOutQuad' },
-        { to: 1, duration: 300, ease: 'easeInOutQuad' },
+        { to: 0.95, duration: 300, easing: 'easeInOutQuad' },
+        { to: 1, duration: 300, easing: 'easeInOutQuad' },
       ],
     });
   };
+
   const handleMouseLeave = () => {
     animate(root.current, {
       scale: 1,
       rotate: 0,
       opacity: 1,
-      duration: 300,
+      duration: 400,
       easing: 'easeOutQuad',
     });
   };
@@ -80,14 +81,18 @@ const Login = () => {
                 placeholder="Digite sua senha"
               />
             </div>
-
-            <button className={Styles.btnEntrar}>
-              <span>Entrar</span>
-            </button>
+            <Link to="/Dashboard">
+              <button className={Styles.btnEntrar}>
+                <span>Entrar</span>
+              </button>
+            </Link>
 
             <p>
               Não tem conta?
-              <Link to="/Register" onClick={handleRegisterClick}>
+              <Link
+                to="/Register?plano=Demonstração"
+                onClick={handleRegisterClick}
+              >
                 Cadastre-se
               </Link>
             </p>

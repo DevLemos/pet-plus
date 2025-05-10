@@ -50,6 +50,14 @@
   padding: 20px 30px;
   background-color: #F7F7F7;
   gap: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-item-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .features-item-svg {
@@ -66,4 +74,10 @@
   font-weight: 600;
 }
 
-
+.resource-card {
+  transition: box-shadow 0.3s ease;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}

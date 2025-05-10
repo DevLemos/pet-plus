@@ -18,6 +18,8 @@ body{
   margin: 0px;
   color: #333;
   font-family: var(--first-type);
+  max-height: 100vh;
+  overflow-x: hidden;
 }
 
 .home-style {

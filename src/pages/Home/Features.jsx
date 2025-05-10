@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Styles from './Features.module.css';
 import Paw from '../../assets/Paw.svg?react';
 import Calendar from '../../assets/Calendar.svg?react';
@@ -10,6 +10,13 @@ import Users from '../../assets/Users.svg?react';
 const Features = () => {
   return (
     <section id="features" className={Styles.features}>
+      <div class="large row">
+        <div class="medium pyramid">
+          <div class="triangle"></div>
+          <div class="square"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
       <div className="container">
         <div className={Styles['features-contents']}>
           <span className={Styles['features-text-medium']}>Recursos</span>

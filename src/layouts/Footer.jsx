@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import PetPlus from '../assets/LogoFooter.svg?react';
-import SocialMedia from './SocialMedia';
+import SocialMedia from '../components/SocialMedia';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -81,7 +81,7 @@ const Footer = () => {
                 </span>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/TermosCondicoes">
                   <span>Termos e Condições</span>
                 </Link>
               </li>

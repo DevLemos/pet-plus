@@ -1,0 +1,81 @@
+.TermsAndConditions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px auto 200px auto;
+}
+
+.title-bg {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  background-color: #F7F7F7;
+  padding: 100px 200px;
+  margin: 0px;
+}
+
+.title-decoration{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  margin-left: 6%;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #104D58;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: #F1FAFC;
+}
+
+.title-bg h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  margin-left: 6%;
+  text-align: center;
+  color: #000000;
+}
+
+.title-bg h2 span {
+  color: #104D58;
+}
+
+.terms-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 100px auto 200px auto;
+}
+
+.terms-content div{
+  display: flex;
+  width: 90%;
+  padding: 20px 40px;
+  flex-direction: column;
+}
+
+.terms-content div h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.terms-content div p {
+  margin-bottom: 20px;
+}
+
+.terms-content div:last-child ul{
+  margin-top: 20px;
+}
+
+.terms-content div:last-child li{
+  list-style: square;
+  margin-top: 10px;
+  margin-left: 30px;
+}

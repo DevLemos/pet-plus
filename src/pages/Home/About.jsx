@@ -25,7 +25,7 @@ const About = () => {
             entende e atende às necessidades específicas do seu negócio.
           </p>
 
-          <Link className={Styles.btnConhecaHistoria} to="/">
+          <Link className={Styles.btnConhecaHistoria} to="/ConhecaNos">
             Conheça nossa história
           </Link>
         </div>

@@ -1,8 +1,19 @@
 import Styles from './Introduction.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Veterinary from '../../assets/Veterinary.jpg';
 
 const Introduction = () => {
+  const navigate = useNavigate();
+  const handleNavigateAndScroll = (sectionId) => {
+    navigate('/'); // Primeiro volta para a Home
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Espera um pouquinho pra garantir que a Home carregou
+  };
+
   return (
     <section id="introduction" className={Styles.introduction}>
       <div className="container">
@@ -22,11 +33,14 @@ const Introduction = () => {
           </p>
 
           <div className={Styles['introduction-contents-buttons']}>
-            <Link className={Styles.btnExperimente} to="/">
+            <Link
+              className={Styles.btnExperimente}
+              onClick={() => handleNavigateAndScroll('plans')}
+            >
               <span>Experimente já</span>
             </Link>
 
-            <Link className={Styles.btnConhecaNos} to="/">
+            <Link className={Styles.btnConhecaNos} to="/ConhecaNos">
               Conheça-nos
             </Link>
           </div>

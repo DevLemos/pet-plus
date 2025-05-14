@@ -1,8 +1,13 @@
-import React from 'react';
-// import Styles from '../Login/Login.module.css';
+// import React from 'react';
+import Styles from './Dashboard.module.css';
+import Sidebar from '../../components/Sidebar';
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <section className={Styles.dashboard}>
+      <Sidebar />
+    </section>
+  );
 };
 
 export default Dashboard;

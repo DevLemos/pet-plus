@@ -2,18 +2,35 @@
   box-sizing: border-box;
 }
 
-:root{
---first-type: Roboto, Arial, sans-serif;
---white-color: #FFFFFF;
-/* --second-type: Poppins, Arial, sans-serif; */
-
+:root {
+  --first-type: Roboto, Arial, sans-serif;
+  --white-color: #ffffff;
+  /* --second-type: Poppins, Arial, sans-serif; */
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body{
+/* Ícone do calendário */
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Aplica padding diretamente ao input real dentro do DatePicker */
+.react-datepicker__input-container input {
+  padding-left: 2.5rem !important;
+  box-sizing: border-box;
+  width: 140px;
+}
+
+body {
   padding-top: 7rem;
   margin: 0px;
   color: #333;
@@ -24,30 +41,36 @@ body{
 }
 
 .home-style {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.login-style, .dashboard-style {
-  background-color: #F1FAFC;
+.login-style,
+.dashboard-style {
+  background-color: #f1fafc;
   padding-top: 0px;
 }
 
 .dashboard-style.dark {
-  background-color: #18191A;
+  background-color: #18191a;
   color: white;
 }
 
-h1,h2,h3,h4, p{
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0px;
 }
 
-ul, li{
-list-style: none;
-padding: 0px;
-margin: 0px;
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
-a{
+a {
   padding: 10px;
   text-decoration: none;
 }
@@ -64,7 +87,7 @@ main {
 .container {
   display: flex;
   max-width: 1800px;
-  padding: 120px 70px;
+  padding: 100px 70px;
   margin: 0 auto;
 }
 
@@ -86,7 +109,7 @@ main {
     width: 70%;
     justify-content: center;
   } */
-  
+
   /* .nav {
     margin: 0px 100px;
   } */

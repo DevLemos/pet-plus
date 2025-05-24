@@ -22,7 +22,12 @@ function AppContent() {
   const location = useLocation();
 
   // Rotas onde não deve aparecer Header/Footer
-  const hideHeaderFooter = ['/login', '/Register', '/Dashboard'];
+  const hideHeaderFooter = [
+    '/login',
+    '/Register',
+    '/Dashboard',
+    '/Dashboard/cadastro-funcionarios',
+  ];
 
   // Verifica se a rota atual está na lista de ocultação
   const shouldHideHeaderFooter = hideHeaderFooter.includes(location.pathname);
@@ -34,11 +39,18 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/ConhecaNos" element={<CompanyHistory />} />
         <Route path="/TermosCondicoes" element={<TermsAndConditions />} />
         <Route path="/Contato" element={<Contact />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        {/* <Route path="cadastro-funcionarios" element={<Employees />} /> */}
+
+        {/* Dashboard Layout com rotas internas */}
+        {/* <Route path="/Dashboard" element={<Dashboard />}>
+          <Route path="cadastro-funcionarios" element={<Employees />} />
+          <Route path="funcionarios" element={<Employees />} />
+        </Route> */}
       </Routes>
       {!shouldHideHeaderFooter && <Footer />}
     </>

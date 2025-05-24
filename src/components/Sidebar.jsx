@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Styles from './Sidebar.module.css';
 import Logo from '../assets/logo-perfil.svg?react';
 import 'boxicons/css/boxicons.min.css';
 
-const Sidebar = () => {
-  const [isClose, setClose] = useState(true);
+const Sidebar = ({ isClose, setClose, onAbrirJanela }) => {
+  // const [isClose, setClose] = useState(true);
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -43,37 +43,37 @@ const Sidebar = () => {
               <input type="search" placeholder="Buscar..." />
             </li>
             <li className={Styles['nav-links']}>
-              <a href="/">
+              <a href="#" onClick={() => onAbrirJanela('NotFound')}>
                 <i class="bx bxs-dashboard"></i>
-                <span className={Styles['nav-text']}>Dashboard</span>
+                <span className={Styles['nav-text']}>Painel</span>
               </a>
             </li>
             <li className={Styles['nav-links']}>
-              <a href="/">
+              <a href="#" onClick={() => onAbrirJanela('NotFound')}>
                 <i class="bx bxs-chat"></i>
                 <span className={Styles['nav-text']}>Mensagens</span>
               </a>
             </li>
             <li className={Styles['nav-links']}>
-              <a href="/">
+              <a href="#" onClick={() => onAbrirJanela('Funcionários')}>
                 <i class="bx bx-male-female"></i>
                 <span className={Styles['nav-text']}>Funcionários</span>
               </a>
             </li>
             <li className={Styles['nav-links']}>
-              <a href="/">
+              <a href="#" onClick={() => onAbrirJanela('NotFound')}>
                 <i class="bx bxs-user-rectangle"></i>
                 <span className={Styles['nav-text']}>Clientes</span>
               </a>
             </li>
             <li className={Styles['nav-links']}>
-              <a href="/">
+              <a href="#" onClick={() => onAbrirJanela('NotFound')}>
                 <i class="bx bxs-package"></i>
                 <span className={Styles['nav-text']}>Estoque</span>
               </a>
             </li>
             <li className={Styles['nav-links']}>
-              <a href="/">
+              <a href="#" onClick={() => onAbrirJanela('NotFound')}>
                 <i class="bx bxs-cog"></i>
                 <span className={Styles['nav-text']}>Configurações</span>
               </a>

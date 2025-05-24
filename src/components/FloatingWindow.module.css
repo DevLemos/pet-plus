@@ -1,0 +1,45 @@
+/* FloatingWindow.module.css */
+:global(.dashboard-style.dark) .floatingWindow {
+  background-color: #3a3b3c;
+}
+
+:global(.dashboard-style.dark) .windowHeader {
+  background-color: #242526;
+}
+
+.floatingWindow {
+  position: absolute;
+  /* top: 100px;
+  left: 100px; */
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.windowHeader {
+  cursor: move;
+  background: #2e7d8e;
+  color: white;
+  padding: 8px 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.windowControls button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* .windowBody {
+  padding: 7px;
+} */

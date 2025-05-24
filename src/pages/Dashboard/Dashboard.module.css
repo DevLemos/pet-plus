@@ -1,3 +1,23 @@
-/* .dashboard {
-  
-} */
+.dashboard {
+  display: flex;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.dashboard main {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-left: 310px; 
+  transition: margin-left 0.3s ease;
+}
+
+.dashboard.close main {
+  margin-left: 80px; 
+}
+
+.containerWindow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* evita que o conteúdo “vaze” */
+}

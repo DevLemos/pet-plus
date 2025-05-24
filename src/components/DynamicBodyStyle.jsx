@@ -14,7 +14,10 @@ const DynamicBodyStyle = () => {
       location.pathname === '/Register'
     ) {
       document.body.classList.add('login-style');
-    } else if (location.pathname === '/Dashboard') {
+    } else if (
+      location.pathname === '/Dashboard' ||
+      location.pathname === '/Dashboard/cadastro-funcionarios'
+    ) {
       document.body.classList.add('dashboard-style');
     }
   }, [location]); // Executa sempre que a rota mudar

@@ -37,7 +37,7 @@ function AppContent() {
       {!shouldHideHeaderFooter && <Header />}
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/pet-plus" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/ConhecaNos" element={<CompanyHistory />} />

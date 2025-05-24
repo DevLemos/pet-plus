@@ -17,7 +17,7 @@ const Demonstration = () => {
           </p>
           <Link
             className={Styles.btnDemonstracao}
-            to="/Register?plano=Demonstração"
+            to="/Register?plano=demonstracao"
           >
             Solicitar Demonstração
           </Link>

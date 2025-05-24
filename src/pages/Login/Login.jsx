@@ -39,7 +39,7 @@ const Login = () => {
   };
 
   const handleNavigateAndScroll = (sectionId) => {
-    navigate('/'); // Primeiro volta para a Home
+    navigate('/pet-plus'); // Primeiro volta para a Home
     setTimeout(() => {
       const section = document.getElementById(sectionId);
       if (section) {
@@ -90,8 +90,8 @@ const Login = () => {
             <p>
               Não tem conta?
               <Link
-                to="/Register?plano=Demonstração"
-                onClick={handleRegisterClick}
+                to="/Register?plano=demonstracao"
+                // onClick={handleRegisterClick}
               >
                 Cadastre-se
               </Link>

@@ -11,9 +11,9 @@ const Footer = () => {
   const location = useLocation();
 
   const sessionNavigation = (section) => {
-    if (location.pathname !== '/') {
+    if (location.pathname !== '/pet-plus') {
       localStorage.setItem('scrollTo', section);
-      navigate('/');
+      navigate('/pet-plus');
     } else {
       scroller.scrollTo(section, {
         duration: 500,

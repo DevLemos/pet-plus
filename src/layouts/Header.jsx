@@ -39,7 +39,7 @@ const Header = () => {
   };
 
   const handleNavigateAndScroll = (sectionId) => {
-    navigate('/'); // Primeiro volta para a Home
+    navigate('/pet-plus'); // Primeiro volta para a Home
     setTimeout(() => {
       const section = document.getElementById(sectionId);
       if (section) {

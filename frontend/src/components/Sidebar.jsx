@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Styles from './Sidebar.module.css';
 import Logo from '../assets/logo-perfil.svg?react';
 import 'boxicons/css/boxicons.min.css';
 
 const Sidebar = ({ isClose, setClose, onAbrirJanela }) => {
-  // const [isClose, setClose] = useState(true);
+  const navigate = useNavigate();
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -15,6 +16,13 @@ const Sidebar = ({ isClose, setClose, onAbrirJanela }) => {
       document.body.classList.remove('dark');
     }
   }, [darkMode]);
+
+  const handleLogout = (e) => {
+    e.preventDefault(); // evita o reload da página pelo link
+
+    // Redireciona para login
+    navigate('/login');
+  };
 
   return (
     <nav className={`${Styles.sidebar} ${isClose ? Styles.close : ''}`}>
@@ -83,7 +91,7 @@ const Sidebar = ({ isClose, setClose, onAbrirJanela }) => {
 
         <div className={Styles['bottom-container']}>
           <li>
-            <a href="#">
+            <a href="#" onClick={handleLogout}>
               <i class="bx bx-log-out"></i>
               <span className={Styles['nav-text']}>Sair</span>
             </a>

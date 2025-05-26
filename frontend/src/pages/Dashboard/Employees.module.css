@@ -137,6 +137,10 @@
   padding-right: 0px;
 }
 
+.divInputCpf {
+  margin-right: 110px;
+}
+
 .divEndereço {
   padding-left: 135px;
   padding-right: 0px;
@@ -303,6 +307,7 @@ select:focus {
   justify-content: flex-end;
   align-items: center;
   margin-right: 60px;
+  gap: 10px;
 }
 
 button i {
@@ -324,6 +329,32 @@ button i {
   background: linear-gradient(to right, #104d58, #2e7d8e);
 }
 .btnSalvar span {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.btnExcluir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100px;
+  gap: 6px;
+  z-index: 1;
+  background-color: #e74c3c;
+  transition: background-color 0.3s ease;
+}
+
+.btnExcluir:hover {
+  background-color: #c0392b;
+}
+
+.btnExcluir span {
   color: #ffffff;
   position: relative;
   z-index: 1;

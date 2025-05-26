@@ -84,6 +84,10 @@ main {
   margin: 0px;
 }
 
+.MuiDataGrid-root {
+  box-sizing: border-box;
+}
+
 .container {
   display: flex;
   max-width: 1800px;

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "VksiA1sq1bHYQSqcnMUPvFwxZeLP77vZRuAGU16Kjs8=",
+  "Source": "PetPlus.Api",
+  "BasePath": "_content/PetPlus.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

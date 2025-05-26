@@ -7,6 +7,7 @@ import Plans from './Plans';
 import Faq from './Faq';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
+import 'animate.css';
 
 const Home = () => {
   useEffect(() => {

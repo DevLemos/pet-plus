@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Styles from './Introduction.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Veterinary from '../../assets/Veterinary.jpg';
+import 'animate.css';
 
 const Introduction = () => {
   const [textAnimClass, setTextAnimClass] = useState('');

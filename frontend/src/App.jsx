@@ -17,6 +17,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import CompanyHistory from './pages/Home/CompanyHistory';
 import TermsAndConditions from './pages/Home/TermsAndConditions';
 import Contact from './pages/Home/Contact';
+import 'animate.css';
 
 function AppContent() {
   const location = useLocation();
